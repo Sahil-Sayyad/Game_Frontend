@@ -20,7 +20,7 @@ const Game = () => {
 
     const handleRollDice = async () => {
         setLoading(true);
-        const response = await axios.post('/api/roll-dice', { betAmount, betOption });
+        const response = await axios.post('https://game-backend-qrml.onrender.com/api/roll-dice', { betAmount, betOption });
         setResult(response.data);
         setPoints(response.data.points);
         setLoading(false);
